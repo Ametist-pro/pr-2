@@ -8,16 +8,27 @@
 <body>
     <script>
 // массив
-const A = [5, 11 ,10, 15, 2, 7, 12, 17, 22, 27];
+var A = [];
 
-// число
-const K = 10;
+// ввод чисел
+while(true) {
+  var input = prompt('Введите число , нажимая "Продолжить" вводится следующее число. Нажимая "Отмена" заканчивается ввод');
+  if(input == null) {
+    break;
+  }
+  // заполняется массив
+  A.push(parseInt(input));
+}
+
+// число 
+var K = 10;
 
 // результат
-const result = [];
+var result = [];
 
 for (let i = 0; i < A.length; i++) {
   if (A[i] > K) {
+
     result.push(A[i]);
   }
 }
